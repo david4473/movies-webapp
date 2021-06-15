@@ -1,0 +1,22 @@
+$black: #333;
+$white: #fff;
+$pink: rgb(245, 115, 137);
+$background: rgb(233, 233, 233);
+$weight: 600;
+$font-size: 20px;
+$box-shadow: 1px 3px 5px rgba(0, 0, 0, 0.1);
+$border-radius: 15px;
+
+@mixin center($direction, $justify) {
+    display: flex;
+    justify-content: $justify;
+    align-items: center;
+    flex-direction: $direction;
+}
+
+@mixin borderRadius($top-left, $top-right, $bottom-left, $bottom-right) {
+    border-top-left-radius: $top-left;
+    border-top-right-radius: $top-right;
+    border-bottom-left-radius: $bottom-left;
+    border-bottom-right-radius: $bottom-right;
+}

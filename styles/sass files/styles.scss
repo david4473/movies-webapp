@@ -1,0 +1,17 @@
+
+@import './reset';
+@import './header';
+@import './variables';
+@import './featured';
+@import './trending';
+
+
+body{
+    background-color: $background;
+}
+
+main{
+    height: 90%;
+}
+
+

@@ -1,0 +1,71 @@
+@import './variables';
+
+.trending-section{
+    @include center(row, center);
+    margin-top: 50px;
+}
+
+.trending-wrapper{
+    @include center(column, center);
+    width: 80%;
+    height: auto; 
+
+    .list-type{
+        width: 100%;
+        text-align: left;
+    }
+}
+
+.trending-parent{
+    
+    width: 100%;
+    margin-top: 30px;
+    position: relative;
+
+    &::after{
+        content: '';
+        width: 50px;
+        height: 100%;
+        position: absolute;
+        top: 0;
+        right: 0;
+        background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, $background 100%);
+    }
+
+    .trending{
+    
+        @include center(row, start);
+        overflow-x: scroll;
+        scroll-snap-type: x mandatory;
+        scrollbar-width: thin;
+        scrollbar-color: #333 rgb(143, 143, 143);
+        position: relative;
+
+
+    .trending-list{
+        list-style-type: none;
+        border-radius: 30px;
+        @include center(column-reverse, auto);
+        position: relative;
+        scroll-snap-align: start;
+        margin-bottom: 20px;
+
+        img{
+            border-radius: 10px;
+        }
+
+        .title{
+            position: absolute;
+        }
+    }
+
+    .trending-list:not(:first-child){
+        margin-left: 20px;
+    }
+
+    .trending-list:last-child{
+        margin-right: 10px;
+    }
+}
+}
+

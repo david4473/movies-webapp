@@ -1,0 +1,28 @@
+@import './variables';
+
+header{
+    @include center(row, space-around);
+    box-shadow: $box-shadow;
+    padding: 25px 0;
+
+        .logo{
+            span{
+                color: $pink;
+                font-weight: $weight;
+            }
+        }
+
+        ul{
+            @include center(row, center);
+            
+            li{
+                list-style-type: none;
+                margin: 0 30px;
+                color: $black;
+
+                &:hover{
+                    color: aqua;
+                }
+            }
+        }
+}

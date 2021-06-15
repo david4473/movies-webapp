@@ -1,0 +1,43 @@
+@import './variables';
+
+
+.featured-content-wrapper{
+    @include center(row, center);
+    margin-top: 50px;
+}
+
+.featured{
+    border-radius: $border-radius;
+    width: 80%;
+    height: 25rem;
+    box-shadow: $box-shadow;
+    overflow-x: scroll;
+    overflow-y: hidden;
+    scrollbar-width: thin;
+    scrollbar-color: #333 rgb(143, 143, 143);
+    scroll-snap-type: x mandatory;
+    background-color: #333;
+    
+
+    ul{
+        display: -webkit-box;
+        
+
+        li{
+            list-style-type: none;
+            width: 100%;
+            height: 25rem;
+            background-size:cover;
+            background-position:initial;
+            background-repeat: no-repeat;
+            scroll-snap-align: start;
+            
+        }
+
+        li:not(:first-child){
+            margin-left: 10px;
+        }
+    }
+    
+}
+
