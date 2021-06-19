@@ -1,3 +1,4 @@
+
 const featured = document.querySelector('.featured-content-wrapper');
 const trendingParent = document.querySelector('.trending-parent');
 const featuredList = document.querySelector('.featured-list');
@@ -64,10 +65,6 @@ const trendingFetchFunc = (url)=>{
 trendingFetchFunc(`https://api.themoviedb.org/3/trending/all/week?api_key=${api_key}`);
 
 trendingParent.append(listParent);
-
-
-
-
 
 const featuredFetchFunc = (url) =>{
     fetch(url)

@@ -22,15 +22,15 @@
     margin-top: 30px;
     position: relative;
 
-    &::after{
-        content: '';
-        width: 50px;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        right: 0;
-        background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, $background 100%);
-    }
+        &::after{
+            content: ''; 
+            width: 50px;
+            height: 100%;
+            position: absolute;
+            top: 0;
+            right: 0;
+            background-image: linear-gradient(to right, rgba(255,255,255,0) 0%, $background 100%);
+        }
 
     .trending{
     
@@ -38,7 +38,7 @@
         overflow-x: scroll;
         scroll-snap-type: x mandatory;
         scrollbar-width: thin;
-        scrollbar-color: #333 rgb(143, 143, 143);
+        scrollbar-color: rgb(136, 136, 136) $background;
         position: relative;
 
 
@@ -49,6 +49,7 @@
         position: relative;
         scroll-snap-align: start;
         margin-bottom: 20px;
+        transition: transform .2s ease-in;
 
         img{
             border-radius: 10px;
@@ -57,6 +58,10 @@
         .title{
             position: absolute;
         }
+
+            &:hover{
+                transform: translateY(-150px);
+            }
     }
 
     .trending-list:not(:first-child){
